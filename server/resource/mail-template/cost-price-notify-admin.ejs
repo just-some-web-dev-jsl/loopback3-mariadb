@@ -1,0 +1,14 @@
+<h1>주문에 구입가 입력이 완료되었습니다</u></h1>
+<h2>주문 정보:</h2>
+<ul>
+  <li>주문 키: <%= orderKey%></li>
+  <li>주문 번호: <%= orderNumber%></li>
+  <li>주문 총액 (배송비 제외): <%= subtotalPrice%></li>
+  <li>입력하신 구입가: <%= totalCostPrice%></li>
+  <li>Margin Price (배송비 제외): <%= totalMarginPrice%></li>
+  <li>주문 생성일: <%= created%></li>
+  <br>
+</ul>
+<br>
+<br>
+<a href="<%= url%>" target="_blank"><%= url%></a>

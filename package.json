@@ -1,0 +1,72 @@
+{
+  "name": "umma-trade-admin-server",
+  "version": "1.2.4",
+  "description": "Umma-Trade is global B2B ecommerce platform.",
+  "productName": "Umma Trade Admin Server",
+  "companyName": "UMMA by B2LiNK, Inc.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/B2Labs/umma-trade-admin-server.git"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "author": {
+    "name": "B2LiNK-B2LABS",
+    "email": "dev@b2link.co.kr",
+    "url": "https://www.b2link.co.kr/"
+  },
+  "main": "server/server.js",
+  "engines": {
+    "node": ">=8.1",
+    "npm": ">=5.7.0"
+  },
+  "scripts": {
+    "format": "prettier --list-different \"**/*.{js,json,md}\"",
+    "format-fix": "prettier --check --write \"**/*.{js,json,md}\"",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "test": "mocha \"./test/**/*test*.js\"",
+    "setup": "npm ci --only=production",
+    "start": "pm2 startOrReload ecosystem.config.js",
+    "stop": "pm2 stop ecosystem.config.js",
+    "delete": "pm2 delete ecosystem.config.js",
+    "reload": "pm2 reload ecosystem.config.js",
+    "deploy": "git pull && npm run setup && npm run start"
+  },
+  "dependencies": {
+    "@paypal/checkout-server-sdk": "^1.0.1",
+    "aws-param-store": "^3.0.0",
+    "aws-sdk": "^2.503.0",
+    "axios": "^0.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "exceljs": "^1.14.0",
+    "formidable": "^1.2.1",
+    "helmet": "^3.20.0",
+    "loopback": "^3.26.0",
+    "loopback-boot": "^3.3.1",
+    "loopback-component-explorer": "^6.4.0",
+    "loopback-component-storage": "^3.6.3",
+    "loopback-connector-mongodb": "^5.0.0",
+    "loopback-connector-mysql": "^5.4.2",
+    "loopback-connector-rest": "^3.4.2",
+    "serve-favicon": "^2.5.0",
+    "sharp": "^0.23.0",
+    "strong-error-handler": "^3.2.0",
+    "tabletojson": "^1.0.4",
+    "uuid": "^3.3.2",
+    "winston": "^3.2.1",
+    "winston-cloudwatch": "^2.0.6",
+    "winston-daily-rotate-file": "^3.10.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "eslint": "^6.1.0",
+    "eslint-config-loopback": "^13.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "mocha": "^6.2.0",
+    "prettier": "1.18.2"
+  }
+}

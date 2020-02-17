@@ -1,0 +1,344 @@
+{
+  "name": "AdminCompany",
+  "description": "관리자 회원 회사정보",
+  "plural": "",
+  "base": "PersistedModel",
+  "scopes": {},
+  "indexes": {},
+  "options": {
+    "idInjection": false,
+    "validateUpsert": true,
+    "mysql": {
+      "schema": "umma",
+      "table": "admin_company"
+    }
+  },
+  "hidden": ["deleted"],
+  "protected": [],
+  "http": { "path": "" },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "id": 1,
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "roleId": {
+      "type": "Number",
+      "required": true,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "role_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "default": 1,
+        "nullable": "N"
+      }
+    },
+    "bizType": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "biz_type",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "scale": {
+      "type": "String",
+      "required": true,
+      "length": 512,
+      "mysql": {
+        "columnName": "scale",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "N"
+      }
+    },
+    "name": {
+      "type": "String",
+      "required": true,
+      "length": 512,
+      "mysql": {
+        "columnName": "name",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "N"
+      }
+    },
+    "logo": {
+      "type": "String",
+      "required": true,
+      "length": 512,
+      "mysql": {
+        "columnName": "logo",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "ceoFirstName": {
+      "type": "String",
+      "required": true,
+      "length": 100,
+      "mysql": {
+        "columnName": "ceo_first_name",
+        "dataType": "varchar",
+        "dataLength": 100,
+        "nullable": "N"
+      }
+    },
+    "ceoLastName": {
+      "type": "String",
+      "required": true,
+      "length": 100,
+      "mysql": {
+        "columnName": "ceo_last_name",
+        "dataType": "varchar",
+        "dataLength": 100,
+        "nullable": "N"
+      }
+    },
+    "bizNumber": {
+      "type": "String",
+      "required": true,
+      "length": 50,
+      "mysql": {
+        "columnName": "biz_number",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "nullable": "N"
+      }
+    },
+    "dunsNumber": {
+      "type": "String",
+      "required": false,
+      "length": 10,
+      "mysql": {
+        "columnName": "duns_number",
+        "dataType": "varchar",
+        "dataLength": 10,
+        "nullable": "Y"
+      }
+    },
+    "phone": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "mysql": {
+        "columnName": "phone",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "nullable": "Y"
+      }
+    },
+    "fax": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "mysql": {
+        "columnName": "fax",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "nullable": "Y"
+      }
+    },
+    "ctId": {
+      "type": "String",
+      "required": true,
+      "length": 2,
+      "mysql": {
+        "columnName": "ct_id",
+        "dataType": "char",
+        "dataLength": 2,
+        "nullable": "N"
+      }
+    },
+    "csId": {
+      "type": "String",
+      "required": false,
+      "length": 2,
+      "mysql": {
+        "columnName": "cs_id",
+        "dataType": "char",
+        "dataLength": 2,
+        "nullable": "Y"
+      }
+    },
+    "city": {
+      "type": "String",
+      "required": false,
+      "length": 100,
+      "mysql": {
+        "columnName": "city",
+        "dataType": "varchar",
+        "dataLength": 100,
+        "nullable": "Y"
+      }
+    },
+    "address1": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "address1",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "address2": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "address2",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "zipcode": {
+      "type": "String",
+      "required": false,
+      "length": 10,
+      "mysql": {
+        "columnName": "zipcode",
+        "dataType": "varchar",
+        "dataLength": 10,
+        "nullable": "Y"
+      }
+    },
+    "website": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "website",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "establishmentDate": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "establishment_date",
+        "dataType": "date",
+        "nullable": "Y"
+      }
+    },
+    "comments": {
+      "type": "String",
+      "required": false,
+      "length": 65535,
+      "mysql": {
+        "columnName": "comments",
+        "dataType": "text",
+        "dataLength": 65535,
+        "nullable": "Y"
+      }
+    },
+    "attachments": {
+      "type": "Object",
+      "required": false,
+      "length": 4294967295,
+      "mysql": {
+        "columnName": "attachments",
+        "dataType": "longtext",
+        "dataLength": 4294967295,
+        "default": [],
+        "nullable": "N"
+      }
+    },
+    "dunsVerified": {
+      "type": "Number",
+      "required": false,
+      "precision": 1,
+      "scale": 0,
+      "mysql": {
+        "columnName": "duns_verified",
+        "dataType": "tinyint",
+        "dataPrecision": 1,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "dunsVerifiedUpdated": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "duns_verified_updated",
+        "dataType": "timestamp",
+        "nullable": "Y"
+      }
+    },
+    "certVerified": {
+      "type": "Number",
+      "required": false,
+      "precision": 1,
+      "scale": 0,
+      "mysql": {
+        "columnName": "cert_verified",
+        "dataType": "tinyint",
+        "dataPrecision": 1,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "certVerifiedUpdated": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "cert_verified_updated",
+        "dataType": "timestamp",
+        "nullable": "Y"
+      }
+    },
+    "created": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "created",
+        "dataType": "timestamp",
+        "default": "CURRENT_TIMESTAMP",
+        "nullable": "Y"
+      }
+    },
+    "updated": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "updated",
+        "dataType": "timestamp",
+        "nullable": "Y"
+      }
+    },
+    "deleted": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "deleted",
+        "dataType": "timestamp",
+        "nullable": "Y"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

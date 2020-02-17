@@ -1,0 +1,105 @@
+{
+  "name": "CustomAcl",
+  "description": "커스텀 ACL",
+  "plural": "",
+  "base": "ACL",
+  "scopes": {},
+  "indexes": {},
+  "options": {
+    "idInjection": false,
+    "validateUpsert": true,
+    "mysql": {
+      "schema": "umma",
+      "table": "custom_acl"
+    }
+  },
+  "hidden": [],
+  "protected": [],
+  "http": { "path": "" },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "id": 1,
+      "required": true,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "model": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "model",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "property": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "property",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "accessType": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "access_type",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "permission": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "permission",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "principalType": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "principal_type",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "principalId": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "principal_id",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

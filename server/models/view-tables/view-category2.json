@@ -1,0 +1,165 @@
+{
+  "name": "ViewCategory2",
+  "description": "",
+  "plural": "",
+  "base": "PersistedModel",
+  "scopes": {},
+  "indexes": {},
+  "options": {
+    "idInjection": false,
+    "validateUpsert": false,
+    "mysql": {
+      "schema": "umma",
+      "table": "view_category2"
+    }
+  },
+  "hidden": [],
+  "protected": [],
+  "http": { "path": "view-category2" },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "id": 1,
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "catCode": {
+      "type": "String",
+      "required": true,
+      "length": 30,
+      "mysql": {
+        "columnName": "cat_code",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "nullable": "N"
+      }
+    },
+    "catName": {
+      "type": "String",
+      "required": true,
+      "length": 512,
+      "mysql": {
+        "columnName": "cat_name",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "N"
+      }
+    },
+    "catDepth": {
+      "type": "Number",
+      "required": true,
+      "precision": 3,
+      "scale": 0,
+      "mysql": {
+        "columnName": "cat_depth",
+        "dataType": "tinyint",
+        "dataPrecision": 3,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "catCd1depth": {
+      "type": "String",
+      "required": false,
+      "length": 30,
+      "mysql": {
+        "columnName": "cat_cd_1depth",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "nullable": "Y"
+      }
+    },
+    "catName1depth": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "cat_name_1depth",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "catCd2depth": {
+      "type": "String",
+      "required": false,
+      "length": 30,
+      "mysql": {
+        "columnName": "cat_cd_2depth",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "nullable": "Y"
+      }
+    },
+    "catName2depth": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "cat_name_2depth",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "catCd3depth": {
+      "type": "String",
+      "required": false,
+      "length": 30,
+      "mysql": {
+        "columnName": "cat_cd_3depth",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "nullable": "Y"
+      }
+    },
+    "catName3depth": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "cat_name_3depth",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "catSort": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "cat_sort",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "catStatus": {
+      "type": "String",
+      "required": true,
+      "length": 1,
+      "mysql": {
+        "columnName": "cat_status",
+        "dataType": "char",
+        "dataLength": 1,
+        "default": "Y",
+        "nullable": "N"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

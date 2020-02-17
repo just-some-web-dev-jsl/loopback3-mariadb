@@ -1,0 +1,418 @@
+{
+  "name": "ViewProductCart",
+  "description": "상품 카트 뷰테이블",
+  "plural": "",
+  "base": "PersistedModel",
+  "scopes": {},
+  "indexes": {},
+  "options": {
+    "idInjection": false,
+    "validateUpsert": true,
+    "mysql": {
+      "schema": "umma",
+      "table": "view_product_cart"
+    }
+  },
+  "hidden": ["deleted"],
+  "protected": [],
+  "http": { "path": "" },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "id": 1,
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataLength": 11,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "roleId": {
+      "type": "Number",
+      "required": true,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "role_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "userId": {
+      "type": "Number",
+      "required": true,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "user_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "prId": {
+      "type": "Number",
+      "required": true,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "pr_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "poId": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "po_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "poName": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "mysql": {
+        "columnName": "po_name",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "nullable": "Y"
+      }
+    },
+    "catCd1depth": {
+      "type": "String",
+      "required": false,
+      "length": 30,
+      "mysql": {
+        "columnName": "cat_cd_1depth",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "nullable": "Y"
+      }
+    },
+    "catCd2depth": {
+      "type": "String",
+      "required": false,
+      "length": 30,
+      "mysql": {
+        "columnName": "cat_cd_2depth",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "nullable": "Y"
+      }
+    },
+    "catCd3depth": {
+      "type": "String",
+      "required": false,
+      "length": 30,
+      "mysql": {
+        "columnName": "cat_cd_3depth",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "nullable": "Y"
+      }
+    },
+    "status": {
+      "type": "Number",
+      "required": false,
+      "precision": 1,
+      "scale": 0,
+      "mysql": {
+        "columnName": "pc_status",
+        "dataType": "tinyint",
+        "dataPrecision": 1,
+        "dataScale": 0,
+        "default": 1,
+        "nullable": "N"
+      }
+    },
+    "quantity": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "quantity",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "default": 1,
+        "nullable": "N"
+      }
+    },
+    "discountId": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "pc_discount_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "created": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "pc_created",
+        "dataType": "timestamp",
+        "default": "CURRENT_TIMESTAMP",
+        "nullable": "Y"
+      }
+    },
+    "updated": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "pc_updated",
+        "dataType": "timestamp",
+        "nullable": "Y"
+      }
+    },
+    "deleted": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "pc_deleted",
+        "dataType": "timestamp",
+        "nullable": "Y"
+      }
+    },
+    "brandName": {
+      "type": "String",
+      "required": true,
+      "length": 512,
+      "mysql": {
+        "columnName": "br_name",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "N"
+      }
+    },
+    "brandId": {
+      "type": "Number",
+      "required": true,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "br_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "productName": {
+      "type": "String",
+      "required": true,
+      "length": 512,
+      "mysql": {
+        "columnName": "pr_name",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "N"
+      }
+    },
+    "productImages": {
+      "type": "Object",
+      "required": false,
+      "length": 4294967295,
+      "mysql": {
+        "columnName": "pr_images",
+        "dataType": "longtext",
+        "dataLength": 4294967295,
+        "default": [],
+        "nullable": "N"
+      }
+    },
+    "productCapacity": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 2,
+      "mysql": {
+        "columnName": "pr_capacity",
+        "dataType": "decimal",
+        "dataPrecision": 10,
+        "dataScale": 2,
+        "nullable": "Y"
+      }
+    },
+    "productCapacityType": {
+      "type": "String",
+      "required": false,
+      "length": 1,
+      "mysql": {
+        "columnName": "pr_capacity_type",
+        "dataType": "char",
+        "dataLength": 1,
+        "nullable": "Y"
+      }
+    },
+    "productSku": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "mysql": {
+        "columnName": "pc_sku",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "nullable": "Y"
+      }
+    },
+    "productInvalidCountry": {
+      "type": "Object",
+      "required": false,
+      "length": 4294967295,
+      "mysql": {
+        "columnName": "pr_invalid_country",
+        "dataType": "longtext",
+        "dataLength": 4294967295,
+        "default": [],
+        "nullable": "N"
+      }
+    },
+    "productBarcode": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "mysql": {
+        "columnName": "pc_barcode",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "nullable": "Y"
+      }
+    },
+    "productMoq": {
+      "type": "Number",
+      "required": true,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "pr_moq",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "productRetailPrice": {
+      "type": "Number",
+      "required": true,
+      "precision": 10,
+      "scale": 2,
+      "mysql": {
+        "columnName": "pr_retail_price",
+        "dataType": "decimal",
+        "dataPrecision": 10,
+        "dataScale": 2,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "productSupplyPrice": {
+      "type": "Number",
+      "required": true,
+      "precision": 10,
+      "scale": 2,
+      "mysql": {
+        "columnName": "pr_supply_price",
+        "dataType": "decimal",
+        "dataPrecision": 10,
+        "dataScale": 2,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "productSupplyRate": {
+      "type": "Number",
+      "required": true,
+      "precision": 10,
+      "scale": 2,
+      "mysql": {
+        "columnName": "pr_supply_rate",
+        "dataType": "decimal",
+        "dataPrecision": 10,
+        "dataScale": 2,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "productTotalPrice": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 2,
+      "mysql": {
+        "columnName": "pc_total_price",
+        "dataType": "decimal",
+        "dataPrecision": 10,
+        "dataScale": 2,
+        "default": 1,
+        "nullable": "N"
+      }
+    },
+    "productCartCount": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "pr_cart_count",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "productViewCount": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "pr_view_count",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "productCreated": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "pr_created",
+        "dataType": "timestamp",
+        "default": "CURRENT_TIMESTAMP",
+        "nullable": "Y"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

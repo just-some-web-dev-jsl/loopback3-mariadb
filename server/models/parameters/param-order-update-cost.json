@@ -1,0 +1,13 @@
+{
+  "name": "ParamOrderUpdateCost",
+  "description": "벤더팀에서 구입가 수정",
+  "base": "Model",
+  "idInjection": false,
+  "properties": {
+    "id": false,
+    "orderKey": { "type": "String", "required": false, "description": "주문키" },
+    "totalCostPrice": { "type": "Number", "required": false, "description": "총구입가" },
+    "remark": { "type": "String", "required": false, "description": "Remark" },
+    "description": { "type": "String", "required": false, "description": "description" }
+  }
+}

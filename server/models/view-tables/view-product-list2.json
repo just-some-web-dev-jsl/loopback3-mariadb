@@ -1,0 +1,713 @@
+{
+  "name": "ViewProductList2",
+  "description": "회원용 상품 리스트 뷰테이블",
+  "plural": "",
+  "base": "PersistedModel",
+  "scopes": {},
+  "indexes": {},
+  "options": {
+    "idInjection": false,
+    "validateUpsert": true,
+    "mysql": {
+      "schema": "umma",
+      "table": "view_product_list2"
+    }
+  },
+  "hidden": [],
+  "protected": [],
+  "http": { "path": "" },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "id": 1,
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "catCd": {
+      "type": "String",
+      "required": true,
+      "length": 30,
+      "mysql": {
+        "columnName": "cat_cd",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "nullable": "N"
+      }
+    },
+    "catCd2": {
+      "type": "String",
+      "required": false,
+      "length": 30,
+      "mysql": {
+        "columnName": "cat_cd2",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "nullable": "Y"
+      }
+    },
+    "catCd3": {
+      "type": "String",
+      "required": false,
+      "length": 30,
+      "mysql": {
+        "columnName": "cat_cd3",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "nullable": "Y"
+      }
+    },
+    "brId": {
+      "type": "Number",
+      "required": true,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "br_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "catCd1depth": {
+      "type": "String",
+      "required": false,
+      "length": 30,
+      "mysql": {
+        "columnName": "cat_cd_1depth",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "nullable": "Y"
+      }
+    },
+    "catName1depth": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "cat_name_1depth",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "catCd2depth": {
+      "type": "String",
+      "required": false,
+      "length": 30,
+      "mysql": {
+        "columnName": "cat_cd_2depth",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "nullable": "Y"
+      }
+    },
+    "catName2depth": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "cat_name_2depth",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "catCd3depth": {
+      "type": "String",
+      "required": false,
+      "length": 30,
+      "mysql": {
+        "columnName": "cat_cd_3depth",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "nullable": "Y"
+      }
+    },
+    "catName3depth": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "cat_name_3depth",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "cat2Cd1depth": {
+      "type": "String",
+      "required": false,
+      "length": 30,
+      "mysql": {
+        "columnName": "cat2_cd_1depth",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "nullable": "Y"
+      }
+    },
+    "cat2Name1depth": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "cat2_name_1depth",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "cat2Cd2depth": {
+      "type": "String",
+      "required": false,
+      "length": 30,
+      "mysql": {
+        "columnName": "cat2_cd_2depth",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "nullable": "Y"
+      }
+    },
+    "cat2Name2depth": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "cat2_name_2depth",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "cat2Cd3depth": {
+      "type": "String",
+      "required": false,
+      "length": 30,
+      "mysql": {
+        "columnName": "cat2_cd_3depth",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "nullable": "Y"
+      }
+    },
+    "cat2Name3depth": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "cat2_name_3depth",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "cat3Cd1depth": {
+      "type": "String",
+      "required": false,
+      "length": 30,
+      "mysql": {
+        "columnName": "cat3_cd_1depth",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "nullable": "Y"
+      }
+    },
+    "cat3Name1depth": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "cat3_name_1depth",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "cat3Cd2depth": {
+      "type": "String",
+      "required": false,
+      "length": 30,
+      "mysql": {
+        "columnName": "cat3_cd_2depth",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "nullable": "Y"
+      }
+    },
+    "cat3Name2depth": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "cat3_name_2depth",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "cat3Cd3depth": {
+      "type": "String",
+      "required": false,
+      "length": 30,
+      "mysql": {
+        "columnName": "cat3_cd_3depth",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "nullable": "Y"
+      }
+    },
+    "cat3Name3depth": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "cat3_name_3depth",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "brName": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "br_name",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "brLogo": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "br_logo",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "name": {
+      "type": "String",
+      "required": true,
+      "length": 512,
+      "mysql": {
+        "columnName": "name",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "N"
+      }
+    },
+    "images": {
+      "type": "Object",
+      "required": true,
+      "length": 4294967295,
+      "mysql": {
+        "columnName": "images",
+        "dataType": "longtext",
+        "dataLength": 4294967295,
+        "default": [],
+        "nullable": "N"
+      }
+    },
+    "sku": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "mysql": {
+        "columnName": "sku",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "nullable": "Y"
+      }
+    },
+    "bestSeller": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "best_seller",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "newProduct": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "new_product",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "onSale": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "on_sale",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "optionUsed": {
+      "type": "Number",
+      "required": false,
+      "precision": 1,
+      "scale": 0,
+      "mysql": {
+        "columnName": "option_used",
+        "dataType": "tinyint",
+        "dataPrecision": 1,
+        "dataScale": 0,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "optionType": {
+      "type": "String",
+      "enum": ["COLOR", "VOLUME", "SIZE"],
+      "required": false,
+      "mysql": {
+        "columnName": "option_type",
+        "dataType": "enum",
+        "nullable": "Y"
+      }
+    },
+    "optionViewType": {
+      "type": "String",
+      "enum": ["SELECT", "RADIO", "BUTTON"],
+      "required": false,
+      "mysql": {
+        "columnName": "option_view_type",
+        "dataType": "enum",
+        "nullable": "Y"
+      }
+    },
+    "recommended": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "recommended",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "sort": {
+      "type": "Number",
+      "required": true,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "sort",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "moq": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "moq",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "retailPrice": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 2,
+      "mysql": {
+        "columnName": "retail_price",
+        "dataType": "decimal",
+        "dataPrecision": 10,
+        "dataScale": 2,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "retailPriceKRW": {
+      "type": "Number",
+      "required": true,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "retail_price_krw",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "supplyRate": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 2,
+      "mysql": {
+        "columnName": "supply_rate",
+        "dataType": "decimal",
+        "dataPrecision": 10,
+        "dataScale": 2,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "supplyPrice": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 2,
+      "mysql": {
+        "columnName": "supply_price",
+        "dataType": "decimal",
+        "dataPrecision": 10,
+        "dataScale": 2,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "salePrice": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 2,
+      "mysql": {
+        "columnName": "sale_price",
+        "dataType": "decimal",
+        "dataPrecision": 10,
+        "dataScale": 2,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "stock": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "stock",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "manufactured": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "manufactured",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "distributor": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "distributor",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "discontinued": {
+      "type": "Number",
+      "required": false,
+      "precision": 1,
+      "scale": 0,
+      "mysql": {
+        "columnName": "discontinued",
+        "dataType": "tinyint",
+        "dataPrecision": 1,
+        "dataScale": 0,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "comments": {
+      "type": "String",
+      "required": false,
+      "length": 65535,
+      "mysql": {
+        "columnName": "comments",
+        "dataType": "text",
+        "dataLength": 65535,
+        "nullable": "Y"
+      }
+    },
+    "cartCount": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "cart_count",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "favoriteCount": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "favorite_count",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "inquiryCount": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "inquiry_count",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "viewCount": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "view_count",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "display": {
+      "type": "Number",
+      "required": false,
+      "precision": 1,
+      "scale": 0,
+      "mysql": {
+        "columnName": "display",
+        "dataType": "tinyint",
+        "dataPrecision": 1,
+        "dataScale": 0,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "status": {
+      "type": "String",
+      "required": false,
+      "length": 1,
+      "mysql": {
+        "columnName": "status",
+        "dataType": "char",
+        "dataLength": 1,
+        "default": "W",
+        "nullable": "N"
+      }
+    },
+    "created": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "created",
+        "dataType": "timestamp",
+        "nullable": "Y"
+      }
+    },
+    "updated": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "updated",
+        "dataType": "timestamp",
+        "nullable": "Y"
+      }
+    },
+    "deleted": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "deleted",
+        "dataType": "timestamp",
+        "nullable": "Y"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {
+    "brand": {
+      "type": "belongsTo",
+      "model": "Brand",
+      "foreignKey": "brId"
+    },
+    "productOption": {
+      "type": "hasMany",
+      "model": "ProductOption",
+      "foreignKey": "prId"
+    },
+    "productFavorite": {
+      "type": "hasOne",
+      "model": "ProductFavorite",
+      "foreignKey": "prId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

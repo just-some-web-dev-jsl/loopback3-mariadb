@@ -1,0 +1,7 @@
+{
+  "loopback-component-explorer": {
+    "mountPath": "/b2labs",
+    "generateOperationScopedModels": true
+  },
+  "./components/logger-winston": { "enableAPI": true }
+}

@@ -1,0 +1,343 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models",
+      "./models/parameters",
+      "./models/view-tables",
+      "./models/admin-grade"
+    ],
+    "mixins": ["loopback/common/mixins", "loopback/server/mixins", "../common/mixins", "./mixins"]
+  },
+  "Email": {
+    "dataSource": "emailDs"
+  },
+  "Container": {
+    "dataSource": "storage",
+    "public": true
+  },
+  "CustomAcl": {
+    "dataSource": "ummaDs",
+    "public": false
+  },
+  "CustomRoleMapping": {
+    "dataSource": "ummaDs",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "CustomRole": {
+    "dataSource": "ummaDs",
+    "public": false
+  },
+  "CustomAccessToken": {
+    "dataSource": "ummaDs",
+    "public": false
+  },
+  "CommonCode": {
+    "dataSource": "ummaDs",
+    "public": true
+  },
+  "CurrencyRate": {
+    "dataSource": "ummaDs",
+    "public": true
+  },
+  "CommonSite": {
+    "dataSource": "ummaDs",
+    "public": true
+  },
+  "Country": {
+    "dataSource": "ummaDs",
+    "public": true
+  },
+  "CountryState": {
+    "dataSource": "ummaDs",
+    "public": true
+  },
+  "CountryCity": {
+    "dataSource": "ummaDs",
+    "public": true
+  },
+  "Banner": {
+    "dataSource": "ummaDs",
+    "public": true
+  },
+  "Brand": {
+    "dataSource": "ummaDs",
+    "public": true
+  },
+  "Category": {
+    "dataSource": "ummaDs",
+    "public": true
+  },
+  "Admin": {
+    "dataSource": "ummaDs",
+    "options": {
+      "realmRequired": false,
+      "restrictResetPasswordTokenScope": true,
+      "resetPasswordTokenTTL": 900,
+      "emailVerificationRequired": true,
+      "caseSensitiveEmail": false,
+      "ttl": 86400,
+      "maxTTL": 31556926,
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    },
+    "public": true
+  },
+  "AdminCompany": {
+    "dataSource": "ummaDs",
+    "public": false
+  },
+  "AdminStatisticsSales": {
+    "dataSource": null,
+    "public": true
+  },
+  "Buyer": {
+    "dataSource": "ummaDs",
+    "options": {
+      "realmRequired": false,
+      "restrictResetPasswordTokenScope": true,
+      "resetPasswordTokenTTL": 900,
+      "emailVerificationRequired": true,
+      "caseSensitiveEmail": false,
+      "ttl": 86400,
+      "maxTTL": 31556926,
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    },
+    "public": true
+  },
+  "BuyerShipping": {
+    "dataSource": "ummaDs",
+    "public": true
+  },
+  "BuyerCompany": {
+    "dataSource": "ummaDs",
+    "public": false
+  },
+  "BuyerPromotion": {
+    "dataSource": "ummaDs",
+    "public": false
+  },
+  "DebitHistory": {
+    "dataSource": "ummaDs",
+    "public": true,
+    "normalizeUndefinedInQuery": "throw"
+  },
+  "ShipmentService": {
+    "dataSource": "ummaDs",
+    "public": true
+  },
+  "ShippingCompany": {
+    "dataSource": "ummaDs",
+    "public": true
+  },
+  "Seller": {
+    "dataSource": "ummaDs",
+    "options": {
+      "realmRequired": false,
+      "restrictResetPasswordTokenScope": true,
+      "resetPasswordTokenTTL": 900,
+      "emailVerificationRequired": true,
+      "caseSensitiveEmail": false,
+      "ttl": 86400,
+      "maxTTL": 31556926,
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    },
+    "public": true
+  },
+  "SellerCompany": {
+    "dataSource": "ummaDs",
+    "public": false
+  },
+  "Faq": {
+    "dataSource": "ummaDs",
+    "public": true
+  },
+  "Product": {
+    "dataSource": "ummaDs",
+    "public": true
+  },
+  "Proforma": {
+    "dataSource": "ummaDs",
+    "public": true,
+    "normalizeUndefinedInQuery": "throw"
+  },
+  "ProformaProduct": {
+    "dataSource": "ummaDs",
+    "public": false,
+    "normalizeUndefinedInQuery": "throw"
+  },
+  "Order": {
+    "dataSource": "ummaDs",
+    "public": true,
+    "normalizeUndefinedInQuery": "throw"
+  },
+  "OrderRemarkLog": {
+    "dataSource": "ummaDs",
+    "public": true,
+    "normalizeUndefinedInQuery": "throw"
+  },
+  "OrderRefundLog": {
+    "dataSource": "ummaDs",
+    "public": true,
+    "normalizeUndefinedInQuery": "throw"
+  },
+  "OrderShipmentLog": {
+    "dataSource": "ummaDs",
+    "public": true,
+    "normalizeUndefinedInQuery": "throw"
+  },
+  "OrderProduct": {
+    "dataSource": "ummaDs",
+    "public": false,
+    "normalizeUndefinedInQuery": "throw"
+  },
+  "PaymentHistory": {
+    "dataSource": "ummaDs",
+    "public": true,
+    "normalizeUndefinedInQuery": "throw"
+  },
+  "ProductCart": {
+    "dataSource": "ummaDs",
+    "public": true
+  },
+  "ProductOption": {
+    "dataSource": "ummaDs",
+    "public": true
+  },
+  "ProductFavorite": {
+    "dataSource": "ummaDs",
+    "public": true
+  },
+  "ProductSearchCondition": {
+    "dataSource": "ummaDs",
+    "public": true
+  },
+  "ProductViewCount": {
+    "dataSource": "ummaDs",
+    "public": false
+  },
+  "Promotion": {
+    "dataSource": "ummaDs",
+    "public": true
+  },
+  "Inquiry": {
+    "dataSource": "ummaDs",
+    "public": true
+  },
+  "InquiryReply": {
+    "dataSource": "ummaDs",
+    "public": true
+  },
+  "ViewProductCart": {
+    "dataSource": "ummaDs",
+    "public": false
+  },
+  "ViewAdminUser": {
+    "dataSource": "ummaDs",
+    "public": false
+  },
+  "ViewBuyerUser": {
+    "dataSource": "ummaDs",
+    "public": false
+  },
+  "ViewInquiry": {
+    "dataSource": "ummaDs",
+    "public": false
+  },
+  "ViewProductFavorite": {
+    "dataSource": "ummaDs",
+    "public": false
+  },
+  "ViewCategory2": {
+    "dataSource": "ummaDs",
+    "public": false
+  },
+  "ViewProductList2": {
+    "dataSource": "ummaDs",
+    "public": false
+  },
+  "ViewProductDetail2": {
+    "dataSource": "ummaDs",
+    "public": false
+  },
+  "ViewProductAdmin2": {
+    "dataSource": "ummaDs",
+    "public": false
+  },
+  "ViewProductDetailOption": {
+    "dataSource": "ummaDs",
+    "public": false
+  },
+  "MessageHook": {
+    "dataSource": "mongoDs",
+    "public": true
+  },
+  "PimsApi": {
+    "dataSource": "pimsApi",
+    "public": false
+  },
+  "BuyerBasicInfo": {
+    "dataSource": "ummaDs",
+    "public": false
+  },
+  "ChannelOpenApi": {
+    "dataSource": "channelOpenApi",
+    "public": false
+  },
+  "ParamLogin": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ParamForgotEmail": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ParamChangeUserPassword": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ParamOrderUpdateTT": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ParamOrderUpdateTracking": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ParamOrderUpdateCost": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ErrorLog": {
+    "dataSource": "ummaDs",
+    "public": true
+  },
+  "JandiWebhook": {
+    "dataSource": "JandiWebhook",
+    "public": false
+  },
+  "OrderErrorLog": {
+    "dataSource": "ummaDs",
+    "public": true
+  },
+  "AdminNotification": {
+    "dataSource": "ummaDs",
+    "public": true
+  }
+}

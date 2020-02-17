@@ -1,0 +1,12 @@
+{
+  "name": "ParamForgotEmail",
+  "description": "이메일 찾기 파라메터",
+  "base": "Model",
+  "idInjection": false,
+  "properties": {
+    "id": false,
+    "firstName": { "type": "String", "required": true, "description": "이름" },
+    "lastName": { "type": "String", "required": true, "description": "성" },
+    "mobile": { "type": "String", "required": true, "description": "모바일 번호" }
+  }
+}

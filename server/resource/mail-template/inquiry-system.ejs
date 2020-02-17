@@ -1,0 +1,14 @@
+<h1>System inquiry for UMMA</h1>
+<br />
+<p>FROM: <%= email%></p>
+<p>Title: <%= subject%></p>
+<br />
+<p>Content:</p>
+<p style="line-height:16px;word-wrap:break-word;font-size:14px"><%= content%></p>
+<br /><br />
+<ul>
+  <li>User IP: <%= userIP%></li>
+  <li>User Agent: <%= userAgent%></li>
+</ul>
+<a href="<%= url%>">SEE INQUIRY</a><br />
+Sent: <%= created%>

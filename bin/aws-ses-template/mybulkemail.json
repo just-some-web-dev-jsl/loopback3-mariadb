@@ -1,0 +1,32 @@
+{
+  "Source": "sender@example.com",
+  "Template": "MyTemplate",
+  "ConfigurationSetName": "ConfigSet",
+  "Destinations": [
+    {
+      "Destination": {
+        "ToAddresses": ["anaya.iyengar@example.com"]
+      },
+      "ReplacementTemplateData": "{ \"name\":\"Anaya\", \"favoriteanimal\":\"angelfish\" }"
+    },
+    {
+      "Destination": {
+        "ToAddresses": ["liu.jie@example.com"]
+      },
+      "ReplacementTemplateData": "{ \"name\":\"Liu\", \"favoriteanimal\":\"lion\" }"
+    },
+    {
+      "Destination": {
+        "ToAddresses": ["shirley.rodriguez@example.com"]
+      },
+      "ReplacementTemplateData": "{ \"name\":\"Shirley\", \"favoriteanimal\":\"shark\" }"
+    },
+    {
+      "Destination": {
+        "ToAddresses": ["richard.roe@example.com"]
+      },
+      "ReplacementTemplateData": "{}"
+    }
+  ],
+  "DefaultTemplateData": "{ \"name\":\"friend\", \"favoriteanimal\":\"unknown\" }"
+}

@@ -1,0 +1,23 @@
+'use strict';
+module.exports = [
+  {
+    "id": 92,
+    "serviceName": "DHL",
+    "companyCode": "BEFR_DHLInternational"
+  },
+  {
+    "id": 290,
+    "serviceName": "EMS",
+    "companyCode": "CN_EMSInternational"
+  },
+  {
+    "id": 708,
+    "serviceName": "PX",
+    "companyCode": "PX"
+  },
+  {
+    "id": 552,
+    "serviceName": "UPS",
+    "companyCode": "NL_UPSInternational"
+  }
+];

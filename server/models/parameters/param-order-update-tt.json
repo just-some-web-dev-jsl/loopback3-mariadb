@@ -1,0 +1,15 @@
+{
+  "name": "ParamOrderUpdateTT",
+  "description": "재무팀에서 주문 입금 정보 수정",
+  "base": "Model",
+  "idInjection": false,
+  "properties": {
+    "id": false,
+    "orderKey": { "type": "String", "required": false, "description": "주문키" },
+    "ttDepositor": { "type": "String", "required": false, "description": "입금자명" },
+    "paymentConfirmPrice": { "type": "Number", "required": false, "description": "입금 금액" },
+    "paymentConfirmDate": { "type": "Date", "required": false, "description": "입금일" },
+    "remark": { "type": "String", "required": false, "description": "Remark" },
+    "description": { "type": "String", "required": false, "description": "description" }
+  }
+}

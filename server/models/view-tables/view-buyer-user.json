@@ -1,0 +1,572 @@
+{
+  "name": "ViewBuyerUser",
+  "description": "바이어 회원 뷰테이블",
+  "plural": "",
+  "base": "PersistedModel",
+  "scopes": {},
+  "indexes": {},
+  "options": {
+    "idInjection": false,
+    "validateUpsert": false,
+    "mysql": {
+      "schema": "umma",
+      "table": "view_buyer_user"
+    }
+  },
+  "hidden": ["password", "deleted"],
+  "protected": [],
+  "http": { "path": "" },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "id": 1,
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "ctId": {
+      "type": "String",
+      "required": true,
+      "length": 2,
+      "mysql": {
+        "columnName": "ct_id",
+        "dataType": "char",
+        "dataLength": 2,
+        "nullable": "N"
+      }
+    },
+    "ctName": {
+      "type": "String",
+      "required": true,
+      "length": 512,
+      "mysql": {
+        "columnName": "ct_name",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "N"
+      }
+    },
+    "realm": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "realm",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "roleId": {
+      "type": "Number",
+      "required": true,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "role_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "default": 1,
+        "nullable": "N"
+      }
+    },
+    "userType": {
+      "type": "String",
+      "required": true,
+      "length": 30,
+      "mysql": {
+        "columnName": "user_type",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "nullable": "N"
+      }
+    },
+    "companyId": {
+      "type": "String",
+      "required": false,
+      "length": 20,
+      "mysql": {
+        "columnName": "company_id",
+        "dataType": "varchar",
+        "dataLength": 20,
+        "dataPrecision": 20,
+        "nullable": "N"
+      }
+    },
+    "firstName": {
+      "type": "String",
+      "required": true,
+      "length": 100,
+      "mysql": {
+        "columnName": "first_name",
+        "dataType": "varchar",
+        "dataLength": 100,
+        "nullable": "N"
+      }
+    },
+    "lastName": {
+      "type": "String",
+      "required": true,
+      "length": 100,
+      "mysql": {
+        "columnName": "last_name",
+        "dataType": "varchar",
+        "dataLength": 100,
+        "nullable": "N"
+      }
+    },
+    "password": {
+      "type": "String",
+      "required": true,
+      "length": 512,
+      "mysql": {
+        "columnName": "password",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "N"
+      }
+    },
+    "passwordUpdated": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "password_updated",
+        "dataType": "timestamp",
+        "nullable": "Y"
+      }
+    },
+    "email": {
+      "type": "String",
+      "required": true,
+      "length": 512,
+      "mysql": {
+        "columnName": "email",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "N"
+      }
+    },
+    "emailVerified": {
+      "type": "Number",
+      "required": false,
+      "precision": 1,
+      "scale": 0,
+      "mysql": {
+        "columnName": "email_verified",
+        "dataType": "tinyint",
+        "dataPrecision": 1,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "emailVerifiedUpdated": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "email_verified_updated",
+        "dataType": "timestamp",
+        "nullable": "Y"
+      }
+    },
+    "verificationToken": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "verification_token",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "nickName": {
+      "type": "String",
+      "required": false,
+      "length": 100,
+      "mysql": {
+        "columnName": "nick_name",
+        "dataType": "varchar",
+        "dataLength": 100,
+        "nullable": "Y"
+      }
+    },
+    "avatar": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "avatar",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "position": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "position",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "phone": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "mysql": {
+        "columnName": "phone",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "nullable": "Y"
+      }
+    },
+    "mobile": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "mysql": {
+        "columnName": "mobile",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "nullable": "Y"
+      }
+    },
+    "comments": {
+      "type": "String",
+      "required": false,
+      "length": 65535,
+      "mysql": {
+        "columnName": "comments",
+        "dataType": "text",
+        "dataLength": 65535,
+        "nullable": "Y"
+      }
+    },
+    "lastLogin": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "last_login",
+        "dataType": "timestamp",
+        "nullable": "Y"
+      }
+    },
+    "loginCount": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "login_count",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "status": {
+      "type": "String",
+      "required": false,
+      "length": 1,
+      "mysql": {
+        "columnName": "status",
+        "dataType": "char",
+        "dataLength": 1,
+        "default": "W",
+        "nullable": "N"
+      }
+    },
+    "statusUpdated": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "status_updated",
+        "dataType": "timestamp",
+        "nullable": "Y"
+      }
+    },
+    "created": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "created",
+        "dataType": "timestamp",
+        "default": "CURRENT_TIMESTAMP",
+        "nullable": "Y"
+      }
+    },
+    "approved": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "approved",
+        "dataType": "timestamp",
+        "nullable": "Y"
+      }
+    },
+    "updated": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "updated",
+        "dataType": "timestamp",
+        "nullable": "Y"
+      }
+    },
+    "deleted": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "deleted",
+        "dataType": "timestamp",
+        "nullable": "Y"
+      }
+    },
+    "adminUserId": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "admin_user_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "companyBizClass": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "bc_biz_class",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "companyBizType": {
+      "type": "Object",
+      "required": false,
+      "length": 4294967295,
+      "mysql": {
+        "columnName": "bc_biz_type",
+        "dataType": "longtext",
+        "dataLength": 4294967295,
+        "default": [],
+        "nullable": "N"
+      }
+    },
+    "companyKbScale": {
+      "type": "String",
+      "required": true,
+      "length": 512,
+      "mysql": {
+        "columnName": "bc_kb_scale",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "N"
+      }
+    },
+    "companyScale": {
+      "type": "String",
+      "required": true,
+      "length": 512,
+      "mysql": {
+        "columnName": "bc_scale",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "N"
+      }
+    },
+    "companyName": {
+      "type": "String",
+      "required": true,
+      "length": 512,
+      "mysql": {
+        "columnName": "bc_name",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "N"
+      }
+    },
+    "companyLogo": {
+      "type": "String",
+      "required": true,
+      "length": 512,
+      "mysql": {
+        "columnName": "bc_logo",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "companyCeoFirstName": {
+      "type": "String",
+      "required": true,
+      "length": 100,
+      "mysql": {
+        "columnName": "bc_ceo_first_name",
+        "dataType": "varchar",
+        "dataLength": 100,
+        "nullable": "N"
+      }
+    },
+    "companyCeoLastName": {
+      "type": "String",
+      "required": true,
+      "length": 100,
+      "mysql": {
+        "columnName": "bc_ceo_last_name",
+        "dataType": "varchar",
+        "dataLength": 100,
+        "nullable": "N"
+      }
+    },
+    "companyBizNumber": {
+      "type": "String",
+      "required": true,
+      "length": 50,
+      "mysql": {
+        "columnName": "bc_biz_number",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "nullable": "N"
+      }
+    },
+    "companyPhone": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "mysql": {
+        "columnName": "bc_phone",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "nullable": "Y"
+      }
+    },
+    "companyFax": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "mysql": {
+        "columnName": "bc_fax",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "nullable": "Y"
+      }
+    },
+    "companyCtId": {
+      "type": "String",
+      "required": true,
+      "length": 2,
+      "mysql": {
+        "columnName": "bc_ct_id",
+        "dataType": "char",
+        "dataLength": 2,
+        "nullable": "N"
+      }
+    },
+    "companyCsId": {
+      "type": "String",
+      "required": false,
+      "length": 2,
+      "mysql": {
+        "columnName": "bc_cs_id",
+        "dataType": "char",
+        "dataLength": 2,
+        "nullable": "Y"
+      }
+    },
+    "companyCity": {
+      "type": "String",
+      "required": false,
+      "length": 100,
+      "mysql": {
+        "columnName": "bc_city",
+        "dataType": "varchar",
+        "dataLength": 100,
+        "nullable": "Y"
+      }
+    },
+    "companyAddress1": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "bc_address1",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "companyAddress2": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "bc_address2",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "companyZipcode": {
+      "type": "String",
+      "required": false,
+      "length": 10,
+      "mysql": {
+        "columnName": "bc_zipcode",
+        "dataType": "varchar",
+        "dataLength": 10,
+        "nullable": "Y"
+      }
+    },
+    "companyWebsite": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "bc_website",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "companyAttachments": {
+      "type": "Object",
+      "required": false,
+      "length": 4294967295,
+      "mysql": {
+        "columnName": "bc_attachments",
+        "dataType": "longtext",
+        "dataLength": 4294967295,
+        "default": [],
+        "nullable": "N"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {
+    "debit": {
+      "type": "hasMany",
+      "model": "DebitHistory",
+      "foreignKey": "userId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

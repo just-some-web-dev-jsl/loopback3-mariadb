@@ -1,0 +1,267 @@
+<div
+  style="margin:0;padding:0;font-family:Helvetica,AppleSDGothicNeo-Regular,Malgun Gothic,맑은고딕,돋움,dotum,sans-serif;background-color:#f8f8fb;width:100%;margin-left: auto;margin-right: auto;"
+>
+  <table
+    width="100%"
+    cellpadding="0"
+    cellspacing="0"
+    align="center"
+    border="0"
+    style="max-width:600px;margin:0 auto;border-collapse:collapse;font-family:Helvetica,AppleSDGothicNeo-Regular,Malgun Gothic,맑은고딕,돋움,dotum,sans-serif;color:#000000"
+  >
+    <tr>
+      <td height="40"></td>
+    </tr>
+    <tr>
+      <td>
+        <table
+          width="100%"
+          cellpadding="0"
+          cellspacing="0"
+          align="center"
+          border="0"
+          bgcolor="#ffffff"
+          style="max-width:600px;width:100%;border-collapse:collapse;font-family:Helvetica,AppleSDGothicNeo-Regular,Malgun Gothic,맑은고딕,돋움,dotum,sans-serif;color:#000000"
+        >
+          <tr>
+            <td border="0" cellpadding="0" cellspacing="0" height="4" bgcolor="#000000"></td>
+          </tr>
+          <tr>
+            <td height="100" align="center" valign="middle">
+              <img src="https://d3ea9molln0us0.cloudfront.net/img/static/mail/mail_logo.png" />
+            </td>
+          </tr>
+          <tr>
+            <td height="1" bgcolor="#cccccc"></td>
+          </tr>
+          <tr>
+            <td height="5" bgcolor="#f8f8fb"></td>
+          </tr>
+          <tr>
+            <td height="49"></td>
+          </tr>
+          <tr>
+            <td>
+              <table
+                width="100%"
+                cellpadding="0"
+                cellspacing="0"
+                align="center"
+                border="0"
+                bgcolor="#ffffff"
+                style="font-family:Helvetica,AppleSDGothicNeo-Regular,Malgun Gothic,맑은고딕,돋움,dotum,sans-serif;color:#000000"
+              >
+                <tr>
+                  <td width="30"></td>
+                  <td>
+                    <table
+                      width="100%"
+                      cellpadding="0"
+                      cellspacing="0"
+                      align="center"
+                      border="0"
+                      bgcolor="#ffffff"
+                      style="font-family:Helvetica,AppleSDGothicNeo-Regular,Malgun Gothic,맑은고딕,돋움,dotum,sans-serif;color:#000000"
+                    >
+                      <tr>
+                        <td>
+                          <p style="line-height:26px;font-size:26px;text-align:center;">
+                            You have successfully requested a quote
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <table
+                      width="100%"
+                      cellpadding="0"
+                      cellspacing="0"
+                      align="center"
+                      border="0"
+                      bgcolor="#ffffff"
+                      style="font-family:Helvetica,AppleSDGothicNeo-Regular,Malgun Gothic,맑은고딕,돋움,dotum,sans-serif;color:#000000"
+                    >
+                      <tr>
+                        <td height="5"></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <table
+                            width="100%"
+                            cellpadding="0"
+                            cellspacing="0"
+                            align="center"
+                            border="0"
+                            style="font-family:Helvetica,AppleSDGothicNeo-Regular,Malgun Gothic,맑은고딕,돋움,dotum,sans-serif;color:#000000"
+                          >
+                            <tr>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="7"></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p style="line-height:16px;font-size:16px;text-align:center;">
+                            <b><%= email %></b>
+                          </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="28"></td>
+                      </tr>
+                    </table>
+
+                    <p>
+                      We are in the process of confirming your quote request. You will receive an email as soon as we confirm the quote. Thank you.
+                    </p>
+                    <table style="margin-bottom: 5px; font-size: 14px;">
+                      <tr>
+                        <td>
+                          <p style="font-size:18px"><b>Proforma information</b></p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Proforma #: <b><%= proformaNumber %></b></td>
+                      </tr>
+                      <tr>
+                        <td>Proforma Key: <b><%= proformaKey %></b></td>
+                      </tr>
+                      <tr>
+                        <td>Sub total: $ <b><%= subtotalPrice %></b></td>
+                      </tr>
+                      <tr>
+                        <td>Total quantity: <b><%= totalQuantity %></b></td>
+                      </tr>
+                      <tr>
+                        <td># of products: <b><%= prType %></b></td>
+                      </tr>
+                      <tr style="height: 10px"></tr>
+                    </table>
+
+                    <table style="font-size: 14px;margin-bottom:20px">
+                      <tr>
+                        <td>
+                          <p style="font-size:18px"><b>Shipping Information</b></p>
+                        </td>
+                      </tr>
+                      <!-- incoterms FCA -->
+                      <% if(incoterms === 'FCA') { %>
+                      <tr>
+                        <td>Incoterms: <%= incoterms%></td>
+                      </tr>
+                      <tr>
+                        <td>Destination: <b><%= address1 %><% if(address2) {%> <%= address2 %><%}%>, <%= city %>, <%= ctId %> </b></td>
+                      </tr>
+                      <tr>
+                        <td>Postal Code: <b><%= zipCode %></b></td>
+                      </tr>
+                      <tr>
+                        <td>Forwarder's name: <b><%= recName %></b></td>
+                      </tr>
+                      <% } %>
+
+                      <!-- incoterms EXW -->
+                      <% if(incoterms === 'EXW') { %>
+                      <tr>
+                        <td>Incoterms: <%= incoterms%></td>
+                      </tr>
+
+                      <tr>
+                        <td>Forwarder's name: <b><%= recName %></b></td>
+                      </tr>
+                      <% } %>
+
+                      <!-- incoterms DAP -->
+                      <% if(incoterms === 'DAP') { %>
+                      <tr>
+                        <td>Incoterms: <%= incoterms%></td>
+                      </tr>
+                      <tr>
+                        <td>Destination: <b><%= address1 %><% if(address2) {%> <%= address2 %><%}%>, <%= city %>, <%= ctId %> </b></td>
+                      </tr>
+                      <tr>
+                        <td>Zip Code: <b><%= zipCode %></b></td>
+                      </tr>
+                      <tr>
+                        <td>Recipient: <b><%= recName %></b></td>
+                      </tr>
+                      <% } %>
+                    </table>
+
+                    <table
+                      width="100%"
+                      cellpadding="0"
+                      cellspacing="0"
+                      align="center"
+                      border="0"
+                      bgcolor="#ffffff"
+                      style="font-family:Helvetica,AppleSDGothicNeo-Regular,Malgun Gothic,맑은고딕,돋움,dotum,sans-serif;color:#000000"
+                    >
+                      <!--<tr>
+                        <td width="30"></td>
+                        <td align="center" height="37" style="border:1px solid #000000">
+                          <a href="<%=  url  %>" style="display:block;font-weight:bold;color:#000000;text-decoration:none">Check activity</a>
+                        </td>
+                        <td width="30"></td>
+                      </tr>-->
+                    </table>
+
+                    <p style="text-align: center; font-size: 11px">You have received this email to let you know about a change to your UMMA account.</p>
+                  </td>
+                  <td width="30"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td height="49"></td>
+          </tr>
+          <tr>
+            <td height="1" bgcolor="#cccccc"></td>
+          </tr>
+          <tr>
+            <td height="5" bgcolor="#f8f8fb"></td>
+          </tr>
+          <tr>
+            <td height="105">
+              <table
+                width="100%"
+                cellpadding="0"
+                cellspacing="0"
+                align="center"
+                border="0"
+                bgcolor="#ffffff"
+                style="font-family:Helvetica,AppleSDGothicNeo-Regular,Malgun Gothic,맑은고딕,돋움,dotum,sans-serif;color:#000000"
+              >
+                <tr>
+                  <td align="center" valign="middle">
+                    <img src="https://d3ea9molln0us0.cloudfront.net/img/static/mail/ico_mail.png" />
+                  </td>
+                </tr>
+                <tr>
+                  <td height="10"></td>
+                </tr>
+                <tr>
+                  <td align="center" valign="middle">
+                    <p style="font-size:12px;color:#666666">Copyright @ 2019 umma, All rights reserved.</p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td height="1" bgcolor="#cccccc"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td height="40"></td>
+    </tr>
+  </table>
+</div>

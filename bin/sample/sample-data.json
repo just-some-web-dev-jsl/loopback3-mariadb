@@ -1,0 +1,18 @@
+{
+  "Admin": [
+    { "id": "1", "username": "test admin 1", "email": "admin1@umma.io", "password": "12345" },
+    { "id": "2", "username": "test admin 2", "email": "admin2@umma.io", "password": "12345" },
+    { "id": "2", "username": "test admin 3", "email": "admin3@umma.io", "password": "12345" }
+  ],
+  "Buyer": [
+    { "id": "1", "username": "test buyer 1", "email": "buyer1@umma.io", "password": "12345" },
+    { "id": "2", "username": "test buyer 2", "email": "buyer2@umma.io", "password": "12345" },
+    { "id": "2", "username": "test buyer 3", "email": "buyer3@umma.io", "password": "12345" }
+  ],
+  "Seller": [
+    { "id": "1", "username": "test seller 1", "email": "seller1@umma.io", "password": "12345" },
+    { "id": "2", "username": "test seller 2", "email": "seller2@umma.io", "password": "12345" },
+    { "id": "2", "username": "test seller 3", "email": "seller3@umma.io", "password": "12345" }
+  ],
+  "MultiAccessToken": []
+}

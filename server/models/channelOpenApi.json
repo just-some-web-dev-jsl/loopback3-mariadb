@@ -1,0 +1,24 @@
+{
+  "name": "ChannelOpenApi",
+  "description": "channel.io open api",
+  "plural": "ChannelOpenApi",
+  "base": "Model",
+  "idInjection": false,
+  "hidden": [],
+  "protected": [],
+  "http": { "path": "" },
+  "properties": {},
+  "options": {
+    "promisify": true
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "*"
+    }
+  ],
+  "methods": {}
+}

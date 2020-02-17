@@ -1,0 +1,12 @@
+https://ko.wikipedia.org/wiki/ISO_3166-1
+https://en.wikipedia.org/wiki/ISO_3166-1
+
+https://ko.wikipedia.org/wiki/ISO_3166-2:KR
+https://en.wikipedia.org/wiki/ISO_3166-2:KR
+
+https://countrycode.org/
+
+https://datahub.io/core/country-codes
+https://datahub.io/core/country-codes/r/country-codes.csv
+https://datahub.io/core/country-codes/r/country-codes.json
+

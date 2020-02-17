@@ -1,0 +1,11 @@
+{
+  "name": "ParamLogin",
+  "description": "로그인 파라메터",
+  "base": "Model",
+  "idInjection": false,
+  "properties": {
+    "id": false,
+    "email": { "type": "String", "required": true, "description": "이메일 주소" },
+    "password": { "type": "String", "required": true, "description": "비밀번호" }
+  }
+}

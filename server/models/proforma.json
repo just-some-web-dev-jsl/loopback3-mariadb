@@ -1,0 +1,544 @@
+{
+  "name": "Proforma",
+  "description": "가견적서",
+  "plural": "",
+  "base": "PersistedModel",
+  "scopes": {},
+  "indexes": {},
+  "options": {
+    "idInjection": false,
+    "validateUpsert": true,
+    "mysql": {
+      "schema": "umma",
+      "table": "proforma"
+    }
+  },
+  "hidden": ["deleted"],
+  "protected": [],
+  "http": { "path": "" },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "id": 1,
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "proformaKey": {
+      "type": "String",
+      "required": false,
+      "length": 30,
+      "mysql": {
+        "columnName": "proforma_key",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "nullable": "N"
+      }
+    },
+    "proformaNumber": {
+      "type": "String",
+      "required": false,
+      "length": 30,
+      "mysql": {
+        "columnName": "proforma_number",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "nullable": "Y"
+      }
+    },
+    "roleId": {
+      "type": "Number",
+      "required": true,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "role_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "userId": {
+      "type": "Number",
+      "required": true,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "user_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "adminUserId": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "admin_user_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "operatorUserId": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "operator_user_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "shippingPrice": {
+      "type": "Number",
+      "required": true,
+      "precision": 10,
+      "scale": 2,
+      "mysql": {
+        "columnName": "shipping_price",
+        "dataType": "decimal",
+        "dataPrecision": 10,
+        "dataScale": 2,
+        "nullable": "N"
+      }
+    },
+    "manager": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "mysql": {
+        "columnName": "manager",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "nullable": "Y"
+      }
+    },
+    "operator": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "mysql": {
+        "columnName": "operator",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "nullable": "Y"
+      }
+    },
+    "totalWeight": {
+      "type": "Number",
+      "required": true,
+      "precision": 10,
+      "scale": 2,
+      "mysql": {
+        "columnName": "total_weight",
+        "dataType": "decimal",
+        "dataPrecision": 10,
+        "dataScale": 2,
+        "nullable": "Y"
+      }
+    },
+    "totalQuantity": {
+      "type": "Number",
+      "required": true,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "total_quantity",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "nullable": "Y"
+      }
+    },
+    "prType": {
+      "type": "Number",
+      "required": true,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "pr_type",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "subtotalPrice": {
+      "type": "Number",
+      "required": true,
+      "precision": 10,
+      "scale": 2,
+      "mysql": {
+        "columnName": "subtotal_price",
+        "dataType": "decimal",
+        "dataPrecision": 10,
+        "dataScale": 2,
+        "nullable": "N"
+      }
+    },
+    "totalPrice": {
+      "type": "Number",
+      "required": true,
+      "precision": 10,
+      "scale": 2,
+      "mysql": {
+        "columnName": "total_price",
+        "dataType": "decimal",
+        "dataPrecision": 10,
+        "dataScale": 2,
+        "nullable": "N"
+      }
+    },
+    "recipientName": {
+      "type": "String",
+      "required": true,
+      "length": 100,
+      "mysql": {
+        "columnName": "recipient_name",
+        "dataType": "varchar",
+        "dataLength": 100,
+        "nullable": "N"
+      }
+    },
+    "shippingPhone": {
+      "type": "String",
+      "required": true,
+      "length": 50,
+      "mysql": {
+        "columnName": "shipping_phone",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "nullable": "Y"
+      }
+    },
+    "shippingCtId": {
+      "type": "String",
+      "required": false,
+      "length": 2,
+      "mysql": {
+        "columnName": "shipping_ct_id",
+        "dataType": "char",
+        "dataLength": 2,
+        "nullable": "Y"
+      }
+    },
+    "shippingCsId": {
+      "type": "String",
+      "required": false,
+      "length": 2,
+      "mysql": {
+        "columnName": "shipping_cs_id",
+        "dataType": "char",
+        "dataLength": 2,
+        "nullable": "Y"
+      }
+    },
+    "shippingCity": {
+      "type": "String",
+      "required": false,
+      "length": 100,
+      "mysql": {
+        "columnName": "shipping_city",
+        "dataType": "varchar",
+        "dataLength": 100,
+        "nullable": "Y"
+      }
+    },
+    "shippingAddress1": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "shipping_address1",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "shippingAddress2": {
+      "type": "String",
+      "required": false,
+      "length": 512,
+      "mysql": {
+        "columnName": "shipping_address2",
+        "dataType": "varchar",
+        "dataLength": 512,
+        "nullable": "Y"
+      }
+    },
+    "shippingZipcode": {
+      "type": "String",
+      "required": false,
+      "length": 10,
+      "mysql": {
+        "columnName": "shipping_zipcode",
+        "dataType": "varchar",
+        "dataLength": 10,
+        "nullable": "Y"
+      }
+    },
+    "incoterms": {
+      "type": "String",
+      "required": true,
+      "length": 3,
+      "mysql": {
+        "columnName": "incoterms",
+        "dataType": "char",
+        "dataLength": 3,
+        "nullable": "N"
+      }
+    },
+    "shipmentServiceId": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "shipment_service_id",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "default": 0,
+        "nullable": "Y"
+      }
+    },
+    "estShipDate": {
+      "type": "Number",
+      "required": false,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "est_ship_date",
+        "dataType": "int",
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "comments": {
+      "type": "String",
+      "required": false,
+      "length": 65535,
+      "mysql": {
+        "columnName": "comments",
+        "dataType": "text",
+        "dataLength": 65535,
+        "nullable": "Y"
+      }
+    },
+    "orderPlaced": {
+      "type": "Number",
+      "required": false,
+      "length": 1,
+      "mysql": {
+        "columnName": "order_placed",
+        "dataType": "tinyint",
+        "dataLength": 1,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "refProformaNumber": {
+      "type": "String",
+      "required": false,
+      "length": 30,
+      "mysql": {
+        "columnName": "ref_proforma_number",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "nullable": "Y"
+      }
+    },
+    "refProformaNumber2": {
+      "type": "Object",
+      "required": false,
+      "length": 4294967295,
+      "mysql": {
+        "columnName": "ref_proforma_number2",
+        "dataType": "longtext",
+        "dataLength": 4294967295,
+        "default": [],
+        "nullable": "N"
+      }
+    },
+    "status": {
+      "type": "Number",
+      "required": false,
+      "length": 1,
+      "mysql": {
+        "columnName": "status",
+        "dataType": "tinyint",
+        "dataLength": 1,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "statusUpdated": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "status_updated",
+        "dataType": "timestamp",
+        "nullable": "Y"
+      }
+    },
+    "approved": {
+      "type": "Number",
+      "required": false,
+      "length": 1,
+      "mysql": {
+        "columnName": "approved",
+        "dataType": "tinyint",
+        "dataLength": 1,
+        "default": 0,
+        "nullable": "N"
+      }
+    },
+    "approvedDate": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "approved_date",
+        "dataType": "timestamp",
+        "nullable": "Y"
+      }
+    },
+    "created": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "created",
+        "dataType": "timestamp",
+        "nullable": "Y"
+      }
+    },
+    "updated": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "updated",
+        "dataType": "timestamp",
+        "nullable": "Y"
+      }
+    },
+    "deleted": {
+      "type": "Date",
+      "required": false,
+      "mysql": {
+        "columnName": "deleted",
+        "dataType": "timestamp",
+        "nullable": "Y"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {
+    "product": {
+      "type": "hasMany",
+      "model": "ProformaProduct",
+      "foreignKey": "proformaId"
+    },
+    "user": {
+      "type": "belongsTo",
+      "model": "BuyerBasicInfo",
+      "foreignKey": "userId"
+    },
+    "shippingCountry": {
+      "type": "belongsTo",
+      "model": "Country",
+      "foreignKey": "shippingCtId"
+    },
+    "shippingCompany": {
+      "type": "belongsTo",
+      "model": "ShippingCompany",
+      "foreignKey": "shipmentServiceId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$adminGradeSuper",
+      "permission": "ALLOW",
+      "property": "*"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$adminGradeOperation",
+      "permission": "ALLOW",
+      "property": [
+        "approvedList",
+        "confirmById",
+        "confirmByIds",
+        "approveById",
+        "approveById",
+        "updateInfo",
+        "deleteById",
+        "deleteByIds",
+        "addReference",
+        "manuallyVoid"
+      ]
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$adminGradeLogistics",
+      "permission": "ALLOW",
+      "property": ["approvedList", "confirmById", "confirmByIds", "approveById", "approveByIds", "updateInfo"]
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$admin",
+      "permission": "ALLOW",
+      "property": [
+        "count",
+        "find",
+        "findOne",
+        "findById",
+        "countProforma",
+        "list",
+        "detail",
+        "detailProducts",
+        "detailProductsCount",
+        "__get__product",
+        "__findById__product",
+        "getPdfInfos",
+        "downloadDetailExcel",
+        "downloadRequestDetailExcel"
+      ]
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$buyer",
+      "permission": "ALLOW",
+      "property": ["list", "countProforma", "add", "detail", "detailProducts", "detailProductCount", "__get__product", "__findById__product", "getPdfInfos"]
+    }
+  ],
+  "methods": {}
+}

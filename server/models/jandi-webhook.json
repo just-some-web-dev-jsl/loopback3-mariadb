@@ -1,0 +1,16 @@
+{
+  "name": "JandiWebhook",
+  "description": "Jandi Connect",
+  "plural": "JandiWebhook",
+  "base": "Model",
+  "idInjection": false,
+  "hidden": [],
+  "protected": [],
+  "http": { "path": "" },
+  "properties": {},
+  "options": {
+    "promisify": true
+  },
+  "acls": [],
+  "methods": {}
+}
