@@ -51,7 +51,7 @@
     "loopback-connector-mysql": "^5.4.2",
     "loopback-connector-rest": "^3.4.2",
     "serve-favicon": "^2.5.0",
-    "sharp": "^0.23.0",
+    "sharp": "^0.30.5",
     "strong-error-handler": "^3.2.0",
     "tabletojson": "^1.0.4",
     "uuid": "^3.3.2",
